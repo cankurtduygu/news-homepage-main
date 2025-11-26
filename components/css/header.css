@@ -1,0 +1,17 @@
+@layer components {
+    .header{
+        padding-top:var(--sp-88);
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        & .navbar{
+            & .nav-list{
+                color: var(--clr-grayish-blue);
+                display: flex;
+                gap: var(--sp-40);
+                
+            }
+        }
+
+    }
+}
