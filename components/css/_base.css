@@ -154,4 +154,10 @@
         color: inherit;
         display: inline-block;
     }
+
+    button{
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
 }
