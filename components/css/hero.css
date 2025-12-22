@@ -1,0 +1,111 @@
+@layer components {
+    .hero {
+        margin-bottom: var(--sp-80);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--sp-30);
+        grid-template-areas:
+            'thumbnail thumbnail new'
+            'title description new';
+
+            @media (max-width:48rem){
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                'thumbnail'
+                'title'
+                'description'
+                'new';
+            }
+
+
+        & .hero-content {
+            display: contents;
+
+            & .hero-image-container {
+                grid-area: thumbnail;
+            }
+
+            & .hero-title {
+                grid-area: title;
+
+                font-size: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+
+                font-weight: var(--fw-800);
+            }
+
+            & .hero-content-desc {
+                grid-area: description;
+
+                @media (max-width:48rem){
+                    margin-bottom: var(--sp-64);
+                }
+
+                & .desc {
+                    margin-bottom: var(--sp-28);
+                }
+
+                & .read-more {
+                    padding: var(--sp-12) var(--sp-28);
+                    background-color: var(--clr-red);
+                    letter-spacing: 4.38px;
+                    text-transform: uppercase;
+                    font-weight: var(--fw-700);
+                    color: var(--clr-off-white);
+                    transition: color 0.3s ease-in-out;
+                    
+                    &:hover{
+                        background-color: black;
+                    }
+                }
+            }
+
+        }
+
+        & .new {
+            grid-area: new;
+            background-color: var(--clr-dark-blue);
+            padding: var(--sp-32) var(--sp-24);
+
+            & .new-title-lg {
+                color: var(--clr-orange);
+                font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+            }
+
+            & .new-list {
+                & .new-item {
+                    margin-top: var(--sp-32);
+
+                    /* asagidaki satirda son öge olmadikca bunlari yap demek istiyor.  */
+                    &:not(:last-child) {
+                        border-bottom: 1px solid var(--clr-grayish-blue);
+                        padding-bottom: var(--sp-28);
+                    }
+
+                    & .new-title {
+                        font-size: var(--fs-20);
+                        margin-bottom: var(--sp-8);
+                        line-height: var(--lh-1-2);
+
+                        & .new-link {
+                            color: var(--clr-off-white);
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover{
+                                color: var(--clr-orange);
+                            }
+
+
+
+                        }
+                    }
+
+                    & .new-description {
+                        color: #c5c6ce;
+                    }
+
+
+                }
+            }
+        }
+    }
+}

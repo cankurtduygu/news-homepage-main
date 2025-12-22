@@ -8,37 +8,55 @@
     }
 
     :root {
+        /* colors */
         --clr-orange: hsl(35, 77%, 62%);
         --clr-red: hsl(5, 85%, 63%);
         --clr-off-white: hsl(36, 100%, 99%);
         --clr-grayish-blue: hsl(236, 13%, 42%);
-        --clr-dark-blue: hsl(236, 21%, 26%);
+        --clr-dark-blue: hsl(240, 100%, 5%);
 
-        --fs-18: 0.9375rem;
-        --fs-14: 1.125rem;
+        /* font sizes */
+        --fs-15: 0.9375rem;
+        --fs-16: 1rem;
+        --fs-18: 1.125rem;
         --fs-20: 1.25rem;
-        --fs-22: 1.375rem;
         --fs-32: 2rem;
-        --fs-42: 2.625rem;
+        --fs-40: 2.5rem;
         --fs-56: 3.5rem;
 
+        /* font weights */
         --fw-400: 400;
         --fw-700: 700;
         --fw-800: 800;
 
-        --lh-1: 1.1;
-        --lh-2: 1.2;
-        --lh-3: 1.33;
-        --lh-4: 1.73;
+        /* line heights */
+        --lh-1: 1;
+        --lh-1-2: 1.2;
+        --lh-1-33: 1.33;
+        --lh-1-73: 1.73;
 
+        /* spacing */
         --sp-8: 0.5rem;
         --sp-12: 0.75rem;
         --sp-16: 1rem;
-        --sp-20: 1.25rem;
         --sp-24: 1.5rem;
+        --sp-28: 1.75rem;
+        --sp-30: 1.875rem;
         --sp-32: 2rem;
+        --sp-36: 2.25rem;
         --sp-40: 2.5rem;
-        --sp-48: 3rem;
+        --sp-56: 3.5rem;
+        --sp-64: 4rem;
+        --sp-72: 4.5rem;
+        --sp-80: 5rem;
+        --sp-88: 5.5rem;
+        --sp-128: 8rem;
+        --sp-144: 9rem;
+
+
+
+        /* border radius */
+        --radius-8: 0.5rem;
     }
 
 
@@ -74,7 +92,8 @@
         line-height: 1;
         /* 5. Improve text rendering */
         -webkit-font-smoothing: antialiased;
-        font-size: 15px; /*0.9375rem*/
+        font-size: 15px;
+        /*0.9375rem*/
         background-color: var(--clr-off-white);
     }
 
@@ -110,6 +129,9 @@
     /* 9. Improve line wrapping */
     p {
         text-wrap: pretty;
+        color: var(--clr-grayish-blue);
+        line-height: var(--lh-l-73);
+
     }
 
     h1,
@@ -127,7 +149,9 @@
         padding-left: 0;
     }
 
-    a{
+    a {
         text-decoration: none;
+        color: inherit;
+        display: inline-block;
     }
 }

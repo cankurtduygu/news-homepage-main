@@ -1,0 +1,47 @@
+@layer components{
+& .cards {
+    margin-bottom: var(--sp-128);
+    display: grid;
+    gap: var(--sp-32);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    @media (max-width: 48rem){
+        margin-bottom: var(--sp-80);
+    }
+    
+
+    & .card {
+        display: flex;
+        gap: var(--sp-24);
+
+        & .card-content {
+            & .card-number {
+                color: #c5c6ce;
+                font-size: var(--fs-32);
+                font-weight: var(--fw-700);
+            }
+
+            & .card-title {
+                color: var(--clr-dark-blue);
+                    font-size: var(--fs-18);
+                    font-weight: var(--fw-800);
+
+                & .card-link {
+                    padding-block: var(--sp-12) var(--sp-8);
+                    
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover{
+                        
+                        color: var(--clr-red);
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+}
+}
