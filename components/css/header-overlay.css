@@ -3,11 +3,13 @@
         display: none;
     }
 
-    .navbar.active ~ .header-overlay{
-        display: block;
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 10;
+    @media (max-width: 768px) {
+        .navbar.active ~ .header-overlay{
+            display: block;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
     }
 }
